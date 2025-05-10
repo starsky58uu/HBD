@@ -1,0 +1,67 @@
+#message-container {
+  position: relative;
+  height: 200px;
+  overflow: visible;
+}
+
+#congrats-section {
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.falling-message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fall 1s ease forwards;
+  font-size: 24px;
+  color: #a0522d;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(100px);
+  }
+}
+
+.centered{
+    text-align: center;
+}
+
+.cat-img{
+    display: block;
+    margin:0 auto;
+}
+
+.cat-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #a0522d;
+}
+
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.congrats-img {
+  width: 400px;
+  max-width: 100%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
